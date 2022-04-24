@@ -1,0 +1,28 @@
+{
+    "editor.codeActionsOnSave": ["source.addMissingImports"],
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "cSpell.words": ["BOTY", "consoleui", "Frvar", "GAMEUI", "Horiz", "iframes", "Invis", "LEFTX", "Rvrr", "typs", "Xvar"],
+    "[typescript]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[html]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "typescript.tsdk": "node_modules\\typescript\\lib",
+    "settings.cycle": [
+        {
+            "id": "varReferences",
+            "overrideWorkspaceSettings": true,
+            "values": [
+                {
+                    "typescript.referencesCodeLens.enabled": true,
+                    "codemetrics.toggleCodeMetricsDisplayed": true
+                },
+                {
+                    "typescript.referencesCodeLens.enabled": false,
+                    "codemetrics.toggleCodeMetricsDisplayed": false
+                }
+            ]
+        }
+    ]
+}

@@ -1,0 +1,64 @@
+//
+// ID's
+//
+
+#app {
+    width: 100%;
+    height: 100%;
+}
+
+#titlebar {
+    .flexFixed;
+    flex-basis: 30px;
+    background-color: @colorTitle;
+}
+
+#topBar {
+    .flexFixed;
+    flex-basis: 50px;
+    background-color: @colorTopbar;
+}
+
+#bottomBar {
+    .flexFixed;
+    flex-basis: 25px;
+    background-color: @colorAccent;
+}
+
+#workspace {
+    .flexAuto;
+    background-color: #111;
+}
+
+#leftPanel {
+    .flexFixed;
+    flex-basis: 200px;
+    // display: none;
+}
+
+#canvas {
+    .flexAuto;
+    height: calc(100% - 105px);
+}
+
+#rightPanel {
+    .flexFixed;
+    flex-basis: 300px;
+    height: 100%;
+}
+
+#panelInner {
+    height: 100%;
+}
+
+#layers {
+}
+
+#parameters {
+    // .flexFixed;
+    // flex-basis: 300px;
+    // min-height: 300px;
+}
+
+#elementsList {
+}

@@ -1,0 +1,197 @@
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background-color: inherit;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #333;
+}
+::-webkit-scrollbar-thumb:active:hover {
+  background-color: #444;
+}
+.resize-ew {
+  cursor: ew-resize;
+}
+.resize-ns {
+  cursor: ns-resize;
+}
+.fullSize {
+  width: 100%;
+  height: 100%;
+}
+.flexBotHoriz {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-flow: row;
+  height: 100%;
+}
+.flexBotVert {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-flow: column;
+  height: 100%;
+}
+.vertSlider {
+  cursor: ns-resize;
+  flex: 0 0 5px;
+  margin-left: 0px;
+  margin-right: 0px;
+  border-bottom: 2px solid #111;
+}
+.horizSlider {
+  cursor: ew-resize;
+}
+.flexFixed {
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: 200px;
+}
+.flexGrow {
+  flex-grow: 1;
+  flex-shrink: 0;
+  flex-basis: auto;
+}
+.flexShrink {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+}
+.flexAuto {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
+}
+.scroll {
+  overflow-y: auto;
+  margin-right: 4px !important;
+  padding-right: 1px !important;
+}
+html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+body {
+  margin: 0px;
+  padding: 0;
+  height: 100%;
+  max-height: 100%;
+  width: 100%;
+}
+#app {
+  width: 100%;
+  height: 100%;
+}
+#titlebar {
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: 200px;
+  flex-basis: 30px;
+  background-color: #535353;
+}
+#topBar {
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: 200px;
+  flex-basis: 50px;
+  background-color: #323232;
+}
+#bottomBar {
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: 200px;
+  flex-basis: 25px;
+  background-color: #a04425;
+}
+#workspace {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
+  background-color: #111;
+}
+#leftPanel {
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: 200px;
+}
+#canvas {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: auto;
+  height: calc(100% - 105px);
+}
+#rightPanel {
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: 200px;
+  flex-basis: 300px;
+  height: 100%;
+}
+#panelInner {
+  height: 100%;
+}
+.sidebarOuter {
+  background-color: #1e1e1e;
+}
+.sidebarOuter .sidebarInner {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-flow: column;
+  height: 100%;
+}
+.panelHeader {
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: 200px;
+  flex-basis: 20px;
+  margin-top: 0px;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-bottom: 4px;
+  padding: 5px;
+  padding-left: 15px;
+  border-bottom: 1px solid #535353;
+}
+.panelSection {
+  margin-top: 0px;
+  margin-left: 15px;
+  margin-right: 15px;
+  margin-bottom: 4px;
+  min-height: 100px;
+  visibility: visible;
+}
+.panelSliderVert {
+  cursor: ns-resize;
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: 200px;
+  flex-basis: 5px;
+  height: 5px;
+  border-bottom: 1px #111 solid;
+}
+.panelSliderHoriz {
+  cursor: ew-resize;
+  flex-grow: 0;
+  flex-shrink: 0;
+  flex-basis: 200px;
+  flex-basis: 5px;
+  border-bottom: 2px #111 solid;
+}
+h3 {
+  display: block;
+  color: #e3e3e3;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 0.9em;
+  margin-block-start: 0.3em;
+  margin-block-end: 0.3em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+p {
+  color: #fff;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 0.7em;
+}
+/*# sourceMappingURL=main.css.map */

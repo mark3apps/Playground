@@ -1,0 +1,6 @@
+{
+    "watchFolder": "src/less",
+    "outputFolder": "src/",
+    "mainFile": "main.less",
+    "sourceMap": true
+}
