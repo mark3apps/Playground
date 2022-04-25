@@ -26,6 +26,11 @@
  * ```
  */
 
+// ipcRenderer.on('Delete', close)
+
 import './main.css'
+import { UIMain } from './ts/UI/UI'
 
 console.log('👋 This message is being logged by "renderer.js", included via webpack')
+
+const mainUI = UIMain.getInstance()

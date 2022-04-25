@@ -1,4 +1,4 @@
-@import "modifiers/scrollBar.less";
+@import 'modifiers/scrollBar.less';
 //
 // Modifiers
 //
@@ -17,14 +17,16 @@
 .flexBotHoriz {
     display: flex;
     flex-wrap: nowrap;
-    flex-flow: row;
+    flex-direction: row;
+    align-items: stretch;
     height: 100%;
 }
 
 .flexBotVert {
     display: flex;
     flex-wrap: nowrap;
-    flex-flow: column;
+    flex-direction: column;
+    align-items: stretch;
     height: 100%;
 }
 

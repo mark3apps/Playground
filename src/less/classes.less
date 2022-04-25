@@ -2,11 +2,14 @@
 // Classes
 //
 
-.sidebarOuter {
+.panel {
     background-color: @colorSidebar;
+    min-width: 200px;
+    max-width: 600px;
+    flex-basis: 150px;
+    z-index: 5;
 
-    .sidebarInner {
-        // .fullSize;
+    .panel-inner {
         .flexBotVert;
         // padding: 15px;
     }
@@ -14,6 +17,7 @@
 
 .panelHeader {
     .flexFixed;
+    user-select: none;
     flex-basis: 20px;
 
     margin-top: 0px;
@@ -35,20 +39,102 @@
     visibility: visible;
 }
 
-.panelSliderVert {
-    .resize-ns;
+.sliderVertical {
+    .resize-ew;
     .flexFixed;
-    flex-basis: 5px;
-    height: 5px;
+    flex-basis: 8px;
+    height: 100%;
     border-bottom: 1px @colorWorkspace solid;
 }
 
-.panelSliderHoriz {
-    .resize-ew;
+.panelContainer {
+    .flexAuto;
+    height: 0px;
+    min-height: 200px;
+}
+
+.sliderHorizontal {
+    .resize-ns;
     .flexFixed;
     flex-basis: 5px;
     border-bottom: 2px @colorWorkspace solid;
+    z-index: 5;
 }
 
 .panelProps {
+}
+
+.canvas {
+    .flexAuto;
+    background-color: #111;
+    z-index: 2;
+}
+
+.flexHorizontal {
+    .flexAuto;
+    width: 100%;
+    // height: calc(100% - 105px);
+}
+
+.flexHorizontal-inner {
+    .flexBotHoriz;
+}
+
+.bar {
+    .flexFixed;
+    background-color: @colorTopbar;
+
+    .bar-inner {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        height: 100%;
+    }
+    z-index: 6;
+}
+
+.button {
+    .flexFixed;
+    user-select: none;
+    cursor: pointer;
+
+    .button-icon {
+        display: table;
+        margin: 0 auto;
+        transition-duration: 0.4s;
+        transition-property: color;
+        transition-timing-function: ease;
+    }
+
+    .button-icon:hover {
+        transition-duration: 0.1s;
+        transition-property: color;
+
+        color: rgba(255, 255, 255, 1) !important;
+    }
+}
+
+.flexVertical {
+    .flexBotVert;
+    width: 100%;
+    height: 100%;
+}
+
+.menu {
+    .flexFixed;
+    display: flex;
+    justify-content: center;
+
+    .menu-inner {
+        display: flex;
+        align-items: center;
+
+        h4 {
+        }
+    }
+}
+
+.menu:hover {
+    background-color: #555;
+    user-select: none;
 }

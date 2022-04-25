@@ -3,5 +3,13 @@
     "tabWidth": 4,
     "semi": false,
     "singleQuote": true,
-    "printWidth": 160
+    "printWidth": 120,
+    "overrides": [
+        {
+            "files": "*UI.ts",
+            "options": {
+                "printWidth": 170
+            }
+        }
+    ]
 }

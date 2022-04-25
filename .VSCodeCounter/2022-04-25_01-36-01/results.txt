@@ -1,0 +1,74 @@
+Date : 2022-04-25 01:36:01
+Directory : d:\GitHub\Playground\src\
+Total : 38 files,  3748 codes, 106 comments, 259 blanks, all 4113 lines
+
+Languages
++------------+------------+------------+------------+------------+------------+
+| language   | files      | code       | comment    | blank      | total      |
++------------+------------+------------+------------+------------+------------+
+| TypeScript |         23 |      3,043 |         71 |        187 |      3,301 |
+| CSS        |          1 |        346 |         10 |          0 |        356 |
+| Less       |         12 |        338 |         25 |         67 |        430 |
+| HTML       |          1 |         14 |          0 |          2 |         16 |
+| Markdown   |          1 |          7 |          0 |          3 |         10 |
++------------+------------+------------+------------+------------+------------+
+
+Directories
++--------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| path                                                               | files      | code       | comment    | blank      | total      |
++--------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| .                                                                  |         38 |      3,748 |        106 |        259 |      4,113 |
+| less                                                               |         14 |      2,505 |         25 |         71 |      2,601 |
+| less\fonts                                                         |          6 |      2,260 |          8 |         17 |      2,285 |
+| less\modifiers                                                     |          1 |         12 |          4 |          4 |         20 |
+| ts                                                                 |         20 |        849 |         25 |        173 |      1,047 |
+| ts\Classes                                                         |          1 |         97 |          3 |         23 |        123 |
+| ts\Classes\MouseListener                                           |          1 |         97 |          3 |         23 |        123 |
+| ts\Enums                                                           |          3 |        130 |          0 |          3 |        133 |
+| ts\UI                                                              |         15 |        621 |         22 |        146 |        789 |
++--------------------------------------------------------------------+------------+------------+------------+------------+------------+
+
+Files
++--------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| filename                                                           | language   | code       | comment    | blank      | total      |
++--------------------------------------------------------------------+------------+------------+------------+------------+------------+
+| d:\GitHub\Playground\src\index.html                                | HTML       |         14 |          0 |          2 |         16 |
+| d:\GitHub\Playground\src\index.ts                                  | TypeScript |         30 |         19 |          9 |         58 |
+| d:\GitHub\Playground\src\less\base.less                            | Less       |         12 |          0 |          2 |         14 |
+| d:\GitHub\Playground\src\less\classes.less                         | Less       |        111 |          4 |         25 |        140 |
+| d:\GitHub\Playground\src\less\fonts\Icons.ts                       | TypeScript |      2,160 |          0 |          1 |      2,161 |
+| d:\GitHub\Playground\src\less\fonts\README.md                      | Markdown   |          7 |          0 |          3 |         10 |
+| d:\GitHub\Playground\src\less\fonts\fonts.less                     | Less       |         27 |          2 |          4 |         33 |
+| d:\GitHub\Playground\src\less\fonts\material.less                  | Less       |         24 |          4 |          5 |         33 |
+| d:\GitHub\Playground\src\less\fonts\materialOutlined.less          | Less       |         21 |          1 |          2 |         24 |
+| d:\GitHub\Playground\src\less\fonts\materialRounded.less           | Less       |         21 |          1 |          2 |         24 |
+| d:\GitHub\Playground\src\less\ids.less                             | Less       |          9 |          3 |          3 |         15 |
+| d:\GitHub\Playground\src\less\main.less                            | Less       |          7 |          3 |          5 |         15 |
+| d:\GitHub\Playground\src\less\modifiers.less                       | Less       |         60 |          3 |         11 |         74 |
+| d:\GitHub\Playground\src\less\modifiers\scrollBar.less             | Less       |         12 |          4 |          4 |         20 |
+| d:\GitHub\Playground\src\less\text.less                            | Less       |         27 |          0 |          3 |         30 |
+| d:\GitHub\Playground\src\less\variables.less                       | Less       |          7 |          0 |          1 |          8 |
+| d:\GitHub\Playground\src\main.css                                  | CSS        |        346 |         10 |          0 |        356 |
+| d:\GitHub\Playground\src\renderer.ts                               | TypeScript |          4 |         27 |          4 |         35 |
+| d:\GitHub\Playground\src\ts\Classes\MouseListener\MouseListener.ts | TypeScript |         97 |          3 |         23 |        123 |
+| d:\GitHub\Playground\src\ts\Enums\IconSize.ts                      | TypeScript |          6 |          0 |          1 |          7 |
+| d:\GitHub\Playground\src\ts\Enums\Mouse.ts                         | TypeScript |          5 |          0 |          1 |          6 |
+| d:\GitHub\Playground\src\ts\Enums\Tag.ts                           | TypeScript |        119 |          0 |          1 |        120 |
+| d:\GitHub\Playground\src\ts\UI\UI.ts                               | TypeScript |        106 |          7 |         25 |        138 |
+| d:\GitHub\Playground\src\ts\UI\UIBar.ts                            | TypeScript |         16 |          0 |          5 |         21 |
+| d:\GitHub\Playground\src\ts\UI\UIButton.ts                         | TypeScript |         46 |          0 |         16 |         62 |
+| d:\GitHub\Playground\src\ts\UI\UICanvas.ts                         | TypeScript |         13 |          0 |          4 |         17 |
+| d:\GitHub\Playground\src\ts\UI\UIElement.ts                        | TypeScript |        223 |          3 |         44 |        270 |
+| d:\GitHub\Playground\src\ts\UI\UIFlexHorizontal.ts                 | TypeScript |         10 |          0 |          3 |         13 |
+| d:\GitHub\Playground\src\ts\UI\UIFlexVertical.ts                   | TypeScript |          8 |          0 |          2 |         10 |
+| d:\GitHub\Playground\src\ts\UI\UIMenu.ts                           | TypeScript |         15 |          0 |          3 |         18 |
+| d:\GitHub\Playground\src\ts\UI\UIPanel.ts                          | TypeScript |         16 |          1 |          6 |         23 |
+| d:\GitHub\Playground\src\ts\UI\UIPanelContainer.ts                 | TypeScript |         15 |          0 |          5 |         20 |
+| d:\GitHub\Playground\src\ts\UI\UIPanelHeader.ts                    | TypeScript |         23 |          0 |          7 |         30 |
+| d:\GitHub\Playground\src\ts\UI\UIPanelSection.ts                   | TypeScript |         16 |          0 |          5 |         21 |
+| d:\GitHub\Playground\src\ts\UI\UIPanelSlider.ts                    | TypeScript |         96 |         11 |         16 |        123 |
+| d:\GitHub\Playground\src\ts\UI\UIPanelSliderHorizontal.ts          | TypeScript |          9 |          0 |          3 |         12 |
+| d:\GitHub\Playground\src\ts\UI\UIPanelSliderVertical.ts            | TypeScript |          9 |          0 |          2 |         11 |
+| d:\GitHub\Playground\src\ts\declarations.d.ts                      | TypeScript |          1 |          0 |          1 |          2 |
+| Total                                                              |            |      3,748 |        106 |        259 |      4,113 |
++--------------------------------------------------------------------+------------+------------+------------+------------+------------+

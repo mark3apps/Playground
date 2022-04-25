@@ -1,18 +1,22 @@
 {
-  "compilerOptions": {
-    "allowJs": true,
-    "module": "commonjs",
-    "skipLibCheck": true,
-    "esModuleInterop": true,
-    "noImplicitAny": true,
-    "sourceMap": true,
-    "baseUrl": ".",
-    "outDir": "dist",
-    "moduleResolution": "node",
-    "resolveJsonModule": true,
-    "paths": {
-      "*": ["node_modules/*"]
-    }
-  },
-  "include": ["src/**/*"]
+    "compilerOptions": {
+        "strict": true,
+        "allowJs": true,
+        "module": "commonjs",
+        "skipLibCheck": true,
+        "esModuleInterop": true,
+        "noImplicitAny": true,
+        "sourceMap": true,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "baseUrl": ".",
+        "outDir": "dist",
+        "moduleResolution": "Node",
+        "resolveJsonModule": true,
+        "target": "ESNext",
+        "paths": {
+            "*": ["node_modules/*"]
+        }
+    },
+    "include": ["src/**/*"]
 }
