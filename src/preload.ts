@@ -1,17 +1,22 @@
 // const ipc = require('electron').ipcRenderer
 // const remote = require('electron').remote
 
-import electron, { app } from 'electron'
+import electron from 'electron'
+const ipc = electron.ipcRenderer
 
 window.addEventListener('DOMContentLoaded', () => {
-    const electron = require('electron')
-    const ipc = electron.ipcRenderer
+    const minimize = document.getElementById('minimize-button')
+    minimize?.addEventListener('click', function () {
+        ipc.send('minimize-window')
+    })
 
-    const element = document.getElementById('close-button')
-
-    element?.addEventListener('click', function () {
+    const maximize = document.getElementById('maximize-button')
+    maximize?.addEventListener('click', function () {
         ipc.send('toggle-maximize-window')
     })
 
-    // if (element) element.innerText = 'testing'
+    const close = document.getElementById('close-button')
+    close?.addEventListener('click', function () {
+        ipc.send('close')
+    })
 })

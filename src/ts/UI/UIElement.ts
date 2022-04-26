@@ -248,7 +248,7 @@ export class UIElement {
                 element.classList.add(curClass)
             })
         }
-        console.log(this.divs.length)
+
         this.divs.at(-1)?.appendChild(element)
 
         this.divs.push(element)

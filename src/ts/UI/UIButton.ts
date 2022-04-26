@@ -5,7 +5,7 @@ import { Tag } from '../Enums/Tag'
 import { UIElementProps, UIElement } from './UIElement'
 
 export interface UIButtonProps extends UIElementProps {
-    onClick: (e: MouseEvent) => void
+    onClick?: (e: MouseEvent) => void
     icon: Icon
     size?: IconSize
 }
@@ -31,7 +31,7 @@ export class UIButton extends UIElement {
         this.flexBasisPX = props.size ?? IconSize.Normal
         this.base.style.margin = '5px'
 
-        this.onClick = props.onClick
+        this.onClick = props.onClick ?? ((e: MouseEvent) => {})
 
         this.base.onclick = this._onClick
     }

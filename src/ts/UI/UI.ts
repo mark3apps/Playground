@@ -14,17 +14,7 @@ import { IconSize } from '../Enums/IconSize'
 import { Icon } from '../../less/fonts/Icons'
 import { UIMenu } from './UIMenu'
 
-// import { ipcRenderer } from 'electron'
-
 const buttonClick = (e: MouseEvent) => {}
-
-const maximize = (e: MouseEvent) => {}
-
-const minimize = (e: MouseEvent) => {}
-
-const close = () => {}
-
-// ipc.on('delete', close)
 
 export class UIMain {
     private static instance?: UIMain
@@ -35,7 +25,7 @@ export class UIMain {
     }
 
     app: UIFlexVertical
-    topBar: UIBar
+    titleBar: UIBar
 
     workspace: UIFlexHorizontal
 
@@ -52,20 +42,24 @@ export class UIMain {
         this.app = new UIFlexVertical({ name: 'app' })
         document.getElementById('appWrapper')?.appendChild(this.app.base)
 
-        //
-        this.topBar = this.app.addChild(new UIBar({ name: 'titlebar', backgroundColor: '#444', flexBasis: 25, flexDirection: 'row' }))
-        this.topBar.classList.add('drag-region')
-        this.topBar.addChild(new UIMenu({ name: 'file', title: 'File', flexBasis: 40 }))
-        this.topBar.addChild(new UIMenu({ name: 'edit', title: 'Edit', flexBasis: 40 }))
-        this.topBar.addChild(new UIMenu({ name: 'view', title: 'View', flexBasis: 40 }))
-        this.topBar.addChild(new UIFlexHorizontal({ name: 'dragTitlebar' }))
-        this.topBar.addChild(new UIButton({ name: 'minimize', icon: Icon.Minimize, size: IconSize.Small, onClick: maximize }))
-        this.topBar.addChild(new UIButton({ name: 'maximize', icon: Icon.CheckBoxOutlineBlank, size: IconSize.Small, onClick: buttonClick }))
-        this.topBar.addChild(new UIButton({ name: 'close', icon: Icon.Close, size: IconSize.Small, onClick: close }))
+        // Title Bar
+        this.titleBar = this.app.addChild(new UIBar({ name: 'titlebar', backgroundColor: '#444', flexBasis: 25, flexDirection: 'row' }))
+        this.titleBar.classList.add('drag-region')
+        this.titleBar.addChild(new UIMenu({ name: 'file', title: 'File', flexBasis: 40 }))
+        this.titleBar.addChild(new UIMenu({ name: 'edit', title: 'Edit', flexBasis: 40 }))
+        this.titleBar.addChild(new UIMenu({ name: 'view', title: 'View', flexBasis: 40 }))
+        this.titleBar.addChild(new UIFlexHorizontal({ name: 'dragTitlebar' }))
+        this.titleBar.addChild(new UIButton({ name: 'minimize', icon: Icon.Minimize, size: IconSize.Small }))
+        this.titleBar.addChild(new UIButton({ name: 'maximize', icon: Icon.CheckBoxOutlineBlank, size: IconSize.Small }))
+        this.titleBar.addChild(new UIButton({ name: 'close', icon: Icon.Close, size: IconSize.Small }))
 
-        //
+        // Button Bar
         this.buttonBar = this.app.addChild(new UIBar({ name: 'top', flexBasis: 28, flexDirection: 'row' }))
         this.buttonBar.addChild(new UIButton({ name: 'new', icon: Icon.HighlightAlt, size: IconSize.Normal, onClick: buttonClick }))
+        this.buttonBar.addChild(new UIButton({ name: 'Check', icon: Icon.ZoomOutMap, size: IconSize.Normal, onClick: buttonClick }))
+        this.buttonBar.addChild(new UIFlexHorizontal({ name: 'centerLeft' }))
+        this.buttonBar.addChild(new UIButton({ name: 'Check', icon: Icon.ZoomOutMap, size: IconSize.Normal, onClick: buttonClick }))
+        this.buttonBar.addChild(new UIFlexHorizontal({ name: 'centerLeft' }))
         this.buttonBar.addChild(new UIButton({ name: 'Check', icon: Icon.ZoomOutMap, size: IconSize.Normal, onClick: buttonClick }))
 
         // Set up the Main Workspace
@@ -98,15 +92,24 @@ export class UIMain {
         // this.optionsPanel.base.style.display = 'none'
 
         // Set up the Right Panel
-        this.rightPanel = this.workspace.addChild(new UIPanel({ name: 'right', flexBasis: '300px' }))
-        const parameters = this.rightPanel.addChild(new UIPanelContainer({ name: 'parameters', minHeight: 250, maxHeight: 500, flexBasis: 400 }))
+        this.rightPanel = this.workspace.addChild(new UIPanel({ name: 'right', flexBasis: 300 }))
+        const parameters = this.rightPanel.addChild(new UIPanelContainer({ name: 'parameters', minHeight: 250, maxHeight: 500 }))
+        parameters.base.style.flexGrow = '0'
         parameters.addChild(new UIPanelHeader({ name: 'parameters', title: 'Parameters' }))
         const para = parameters.addChild(new UIPanelSection({ name: 'parameters' }))
         para.addChild(new UIElement({ name: 'testDiv', width: '100%', height: '2500px' }))
 
-        this.rightPanel.addChild(new UIPanelSliderHorizontal({ name: 'rightPanel' }))
+        this.rightPanel.addChild(new UIPanelSliderHorizontal({ name: 'rightPanel', slide: false }))
 
-        const layers = this.rightPanel.addChild(new UIPanelContainer({ name: 'layers', height: '0px', minHeight: '200px', flexBasis: '500px', maxHeight: 'inherit' }))
+        const functionality = this.rightPanel.addChild(new UIPanelContainer({ name: 'functionality', minHeight: 250, maxHeight: 500 }))
+        functionality.base.style.flexGrow = '0'
+        functionality.addChild(new UIPanelHeader({ name: 'functionality', title: 'Functionality' }))
+        const funct = functionality.addChild(new UIPanelSection({ name: 'parameters' }))
+        funct.addChild(new UIElement({ name: 'testDiv', width: '100%', height: '2500px' }))
+
+        this.rightPanel.addChild(new UIPanelSliderHorizontal({ name: 'rightPanel', slide: false }))
+
+        const layers = this.rightPanel.addChild(new UIPanelContainer({ name: 'layers', height: '0px', minHeight: '200px', maxHeight: 'inherit' }))
         const LayersFlex = layers.addChild(new UIFlexVertical({ name: 'containerFlex' }))
         LayersFlex.addChild(new UIPanelHeader({ name: 'layers', title: 'Layers' }))
         const layersInner = LayersFlex.addChild(new UIPanelSection({ name: 'layers' }))
