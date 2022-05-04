@@ -26,7 +26,7 @@
     margin-bottom: 4px;
 
     padding: 5px;
-    padding-left: 15px;
+    padding-left: 0px;
     border-bottom: 1px solid @colorTitle;
 }
 
@@ -61,7 +61,52 @@
     z-index: 5;
 }
 
-.panelProps {
+.textButton {
+    display: flex;
+    height: 30px;
+    // background-color: #2a2a2a;
+    transition: background-color 0.1s ease;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+
+    .textButton-icon {
+        display: block;
+        position: relative;
+        flex: 0 0 20px;
+        margin-left: 3px;
+
+        div {
+            position: absolute;
+            top: 50%;
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+        }
+    }
+
+    .textButton-label {
+        display: block;
+        position: relative;
+        margin-left: 10px;
+        flex-grow: 1;
+        flex-shrink: 1;
+
+        h4 {
+            position: absolute;
+            top: 47%;
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+            text-overflow: ellipsis;
+            line-height: 1.2;
+        }
+    }
+}
+
+.textButton:hover {
+    background-color: #404040;
+    transition: background-color 50ms ease;
+    cursor: pointer;
+    user-select: none;
 }
 
 .canvas {
@@ -101,13 +146,13 @@
     .button-icon {
         display: table;
         margin: 0 auto;
-        transition-duration: 0.4s;
+        transition-duration: 0.2s;
         transition-property: color;
         transition-timing-function: ease;
     }
 
     .button-icon:hover {
-        transition-duration: 0.1s;
+        transition-duration: 50ms;
         transition-property: color;
 
         color: rgba(255, 255, 255, 1) !important;

@@ -11,10 +11,13 @@
         "iframes",
         "Invis",
         "LEFTX",
+        "liga",
+        "opsz",
         "relocator",
         "Rvrr",
         "typs",
         "vercel",
+        "wght",
         "Xvar"
     ],
     "[typescript]": {

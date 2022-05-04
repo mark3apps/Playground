@@ -4,10 +4,18 @@ import { Tag } from '../Enums/Tag'
 
 import { UIElementProps, UIElement } from './UIElement'
 
+export enum MaterialIconVariation {
+    Main = '',
+    Outlined = '-outlined',
+    Rounded = '-round',
+}
+
 export interface UIButtonProps extends UIElementProps {
     onClick?: (e: MouseEvent) => void
     icon: Icon
     size?: IconSize
+    iconVariation?: MaterialIconVariation
+    padding?: string | number
 }
 
 export class UIButton extends UIElement {
@@ -17,11 +25,12 @@ export class UIButton extends UIElement {
 
     constructor(props: UIButtonProps) {
         props.type = 'button'
+        props.iconVariation = props.iconVariation ?? MaterialIconVariation.Outlined
         super(props)
 
         this.button = this.createSub({ suffix: 'icon', tag: Tag.span })
         this.button.classList.add(
-            'material-icons-round',
+            `material-icons${props.iconVariation}`,
             'md-inactive',
             'md-light',
             `md-${props.size ?? IconSize.Normal}`
@@ -29,7 +38,20 @@ export class UIButton extends UIElement {
 
         this.icon = props.icon
         this.flexBasisPX = props.size ?? IconSize.Normal
-        this.base.style.margin = '5px'
+        this.button.style.paddingLeft = props.padding
+            ? typeof props.padding === 'string'
+                ? props.padding
+                : `${props.padding}px`
+            : '5px'
+        this.button.style.paddingRight = props.padding
+            ? typeof props.padding === 'string'
+                ? props.padding
+                : `${props.padding}px`
+            : '5px'
+
+        this.base.style.display = 'table'
+        this.button.style.display = 'table-cell'
+        this.button.style.verticalAlign = 'middle'
 
         this.onClick = props.onClick ?? ((e: MouseEvent) => {})
 

@@ -249,15 +249,15 @@ export class UIElement {
             })
         }
 
-        this.divs.at(-1)?.appendChild(element)
+        if (props.parent) {
+            props.parent.appendChild(element)
+        } else {
+            this.divs.at(-1)?.appendChild(element)
+        }
 
         this.divs.push(element)
 
         return element
-    }
-
-    get html() {
-        return ``
     }
 
     protected static hasObject(obj: HTMLElement) {
